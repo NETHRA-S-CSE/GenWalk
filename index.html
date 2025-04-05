@@ -3,63 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenWalk - Home</title>
     <link rel="stylesheet" href="home.css">
-    <title>GenWalk-Home</title>
 </head>
 <body>
-    
     <header>
         <nav>
-            <div class="logo">GenWalk</div>
+            <div class="logo animate-fade-in">GenWalk</div>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Welcome to GenWalk...!</h1>
-        <p>Step Into a Greener Future – Harnessing Footsteps for Clean Energy!</p>
-        <p>Transforming your footsteps into sustainable energy. Every step you take generates electricity, powering a greener future.</p>
-        <a href="#dashboard" class="btn">View Energy Dashboard</a>
+        <h1 class="animate-fade-in">Welcome to GenWalk..!!!</h1>
+        <p class="animate-fade-in delay-200">Step Into a Greener Future – Harnessing Footsteps for Clean Energy!</p>
+        <p class="animate-fade-in delay-200">Transforming your footsteps into sustainable energy. Every step you take generates electricity, powering a greener future.</p>
+        <a href="#dashboard" class="btn animate-fade-in delay-400">View Energy Dashboard</a>
     </section>
 
     <section class="intro">
-        <h1>What is GenWalk?</h1>
-        <p>GenWalk is a smart footstep energy harvesting system that converts mechanical energy from footsteps into electrical power using a dynamo-based mechanism. Unlike expensive piezoelectric tiles, GenWalk offers a cost-effective, scalable, and eco-friendly solution to generate clean energy in high-footfall areas.</p>
+        <h1 class="animate-fade-in">What is GenWalk?</h1>
+        <p class="animate-fade-in delay-200">GenWalk is a smart footstep energy harvesting system that converts mechanical energy from footsteps into electrical power using a dynamo-based mechanism. Unlike expensive piezoelectric tiles, GenWalk offers a cost-effective, scalable, and eco-friendly solution to generate clean energy in high-footfall areas.</p>
     </section>
 
     <section id="dashboard" class="dashboard">
-        <h2>Energy Dashboard</h2>
+        <h2 class="animate-slide-left">Energy Dashboard</h2>
         
         <div class="stats-container">
-            <div class="stat-card">
+            <div class="stat-card animate-fade-in delay-200">
                 <h3>Total Energy Generated</h3>
                 <div class="stat-value" id="total-energy">0 Wh</div>
                 <p>Today's generation</p>
             </div>
             
-            <div class="stat-card">
+            <div class="stat-card animate-fade-in delay-300">
                 <h3>Footsteps</h3>
                 <div class="stat-value" id="footsteps">0</div>
                 <p>Steps taken today</p>
             </div>
             
-            <div class="stat-card">
+            <div class="stat-card animate-fade-in delay-400">
                 <h3>Energy Rate</h3>
                 <div class="stat-value" id="energy-rate">0 W</div>
                 <p>Current generation rate</p>
             </div>
             
-            
+            <div class="stat-card animate-fade-in delay-500">
+                <h3>CO₂ Saved</h3>
+                <div class="stat-value" id="co2-saved">0 g</div>
+                <p>Environmental impact</p>
+            </div>
         </div>
         
+        <div class="chart-container animate-slide-right delay-300">
+            <h2>Battery Storage</h2>
+            <p>Current battery level: <span id="battery-percentage">0</span>%</p>
+            <div class="battery-container">
+                <div class="battery-level" id="battery-level" style="width: 0%"></div>
+            </div>
+            <p>Estimated usage time: <span id="usage-time">0</span> hours</p>
+        </div>
         
+        <div class="chart-container animate-slide-left delay-400">
+            <h2>Daily Energy Generation</h2>
+            <canvas id="energy-chart"></canvas>
+        </div>
+        
+        <div class="animation-container animate-fade-in delay-500" id="footstep-animation">
+            <!-- Footstep animations will be added by JavaScript -->
+        </div>
     </section>
 
-    <footer>
+    <footer class="animate-fade-in">
         <p>&copy; 2025 GenWalk - Footstep Energy Harvesting Technology</p>
     </footer>
 
-
-
+   
     <script src="home.js"></script>
 </body>
 </html>
